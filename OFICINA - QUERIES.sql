@@ -18,3 +18,9 @@ select Prazo, CPF, Telefone, Endereco, Tipo_Servico
 				from Cliente, Servico 
                 where idCliente=SCliente
                 order by Prazo;
+
+select * from Equipe, Servico where EServico = idServico having Prazo > '2022-12-31';
+select Prazo, EspecialidadeEquipe, Tipo_Servico, Valor, SCliente 
+						from Equipe, Servico 
+                        where Tipo_Servico=idServico 
+                        having Prazo > '2022-12-31';
